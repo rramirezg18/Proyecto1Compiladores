@@ -1,15 +1,9 @@
 grammar Gramatica;
  
-// -----------------------------
-// REGLA PRINCIPAL
-// -----------------------------
 gramatica
     : instruccion+ EOF
     ;
- 
-// -----------------------------
-// SENTENCIAS (INSTRUCCIONES)
-// -----------------------------
+
 instruccion
     : declaracion
     | sentencia_print
@@ -18,17 +12,17 @@ instruccion
     | sentencia_for
     ;
  
-// Declaración (ej: x = 10;)
+// Declaración de variables (x = 10;)
 declaracion
     : asignacion_expr FIN_DE_LINEA
     ;
  
-// Asignación (ej: x = 5 / 5)
+// Asignación de valor a variables(x = 5 / 5;)
 asignacion_expr
     : VARIABLE ASIGNACION expr
     ;
  
-// Sentencia print (ej: print(x); )
+//(print(x); )
 sentencia_print
     : PRINT PARENTESIS_INICIAL expr PARENTESIS_FINAL FIN_DE_LINEA
     ;
@@ -50,20 +44,22 @@ sentencia_for
     : FOR PARENTESIS_INICIAL for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento PARENTESIS_FINAL bloque
     ;
  
-// Parte inicial del for (ej: i = 0)
+// Inicialización en el ciclo for (puede ser asignación o incremento)
 for_inicializacion
     : asignacion_expr?   // puede estar vacío
     ;
- 
-// Condición del for (ej: i < 10)
+
+// Condición del for (i < 10)
 for_condicion
     : expr?              // puede estar vacío
     ;
  
-// Incremento del for (ej: i++, i = i + 1, etc.)
+// Incremento del for (i++, i--, i = i + 1)
 for_incremento
-    : (asignacion_expr | expr)?  // puede estar vacío
+    : VARIABLE (MASMAS | MENOSMENOS)   // i++ o i--
+    | asignacion_expr                  // i = i + 1
     ;
+
  
 // Bloque: { instruccion* } o una sola instruccion
 bloque
@@ -71,29 +67,24 @@ bloque
     | instruccion
     ;
  
-// -----------------------------
-// EXPRESIÓN (UN SÓLO BLOQUE) 
-// con precedencia y <assoc=right> para la potencia '^'
-// -----------------------------
 expr
-    // 1) Potencia: asociatividad a la derecha
+    // Potencia
     : <assoc=right> expr POW expr
-    // 2) Multiplicación, división, módulo
+    // Multiplicación, división, módulo
     | expr (MULTIPLICACION | DIVISION | MODULO) expr
-    // 3) Suma y resta
+    // Suma y resta
     | expr (MAS | MENOS) expr
-    // 4) Operadores relacionales
+    //Operadores relacionales
     | expr (MAYOR | MENOR | MAYOR_IGUAL_QUE | MENOR_IGUAL_QUE | IGUAL | DIFERENTE) expr
-    // 5) Paréntesis
+    //Paréntesis
     | PARENTESIS_INICIAL expr PARENTESIS_FINAL
-    // 6) Variable o número
+    // Variable o número
     | VARIABLE
     | NUMERO
     ;
  
-// -----------------------------
+
 // TOKENS (LEXER)
-// -----------------------------
 PARENTESIS_INICIAL: '(';
 PARENTESIS_FINAL:   ')';
 LLAVES_INICIAL:     '{';
@@ -123,8 +114,8 @@ MENOR_IGUAL_QUE: '<=';
 MAYOR_IGUAL_QUE: '>=';
  
 // (opcional) i++ o i-- si se requiere, solo habría que añadir MASMAS / MENOSMENOS
-//MASMAS: '++';
-//MENOSMENOS: '--';
+MASMAS: '++';
+MENOSMENOS: '--';
  
 VARIABLE: [a-zA-Z_][a-zA-Z0-9_]*;
 NUMERO: [0-9]+ ('.' [0-9]+)?;  // enteros o decimales

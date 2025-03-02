@@ -59,13 +59,27 @@ class AnalizadorVisitor(GramaticaVisitor):
         if ctx.expr():
             return self.visit(ctx.expr())
         return True
-    #permite el incremento del fo
+
+    # Para el incremento del for
     def visitFor_incremento(self, ctx):
-        if ctx.asignacion_expr():
+        if ctx.MASMAS():  # i++
+            var_name = ctx.VARIABLE().getText()  # obtener el nombre de la variable
+            if var_name in self.env:
+                self.env[var_name] += 1
+            else:
+                raise Exception(f"Variable no definida: {var_name}")
+        elif ctx.MENOSMENOS():  # i--
+            var_name = ctx.VARIABLE().getText()  # obtener el nombre de la variable
+            if var_name in self.env:
+                self.env[var_name] -= 1
+            else:
+                raise Exception(f"Variable no definida: {var_name}")
+        elif ctx.asignacion_expr():  # i = i + 1, i = 2, etc.
             return self.visit(ctx.asignacion_expr())
-        elif ctx.expr():
-            return self.visit(ctx.expr())
         return None
+
+
+
     #para bloques de codigos con llaves o una sola instruccion
     def visitBloque(self, ctx):
         if ctx.getChildCount() >= 3 and ctx.getChild(0).getText() == '{':
