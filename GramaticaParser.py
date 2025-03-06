@@ -77,9 +77,9 @@ class GramaticaParser ( Parser ):
                       "LLAVES_INICIAL", "LLAVES_FINAL", "FIN_DE_LINEA", 
                       "IF", "ELSE", "WHILE", "FOR", "PRINT", "ASIGNACION", 
                       "MAS", "MENOS", "MULTIPLICACION", "DIVISION", "MODULO", 
-                      "POW", "IGUAL", "DIFERENTE", "MENOR", "MAYOR", "MENOR_IGUAL_QUE", 
-                      "MAYOR_IGUAL_QUE", "MASMAS", "MENOSMENOS", "VARIABLE", 
-                      "NUMERO", "WS" ]
+                      "POTENCIA", "IGUAL", "DIFERENTE", "MENOR", "MAYOR", 
+                      "MENOR_IGUAL_QUE", "MAYOR_IGUAL_QUE", "MASMAS", "MENOSMENOS", 
+                      "VARIABLE", "NUMERO", "WS" ]
 
     RULE_gramatica = 0
     RULE_instruccion = 1
@@ -117,7 +117,7 @@ class GramaticaParser ( Parser ):
     MULTIPLICACION=14
     DIVISION=15
     MODULO=16
-    POW=17
+    POTENCIA=17
     IGUAL=18
     DIFERENTE=19
     MENOR=20
@@ -1055,8 +1055,8 @@ class GramaticaParser ( Parser ):
         def NUMERO(self):
             return self.getToken(GramaticaParser.NUMERO, 0)
 
-        def POW(self):
-            return self.getToken(GramaticaParser.POW, 0)
+        def POTENCIA(self):
+            return self.getToken(GramaticaParser.POTENCIA, 0)
 
         def MULTIPLICACION(self):
             return self.getToken(GramaticaParser.MULTIPLICACION, 0)
@@ -1162,7 +1162,7 @@ class GramaticaParser ( Parser ):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
                         self.state = 122
-                        self.match(GramaticaParser.POW)
+                        self.match(GramaticaParser.POTENCIA)
                         self.state = 123
                         self.expr(7)
                         pass

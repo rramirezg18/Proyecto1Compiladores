@@ -87,7 +87,7 @@ class GramaticaLexer(Lexer):
     MULTIPLICACION = 14
     DIVISION = 15
     MODULO = 16
-    POW = 17
+    POTENCIA = 17
     IGUAL = 18
     DIFERENTE = 19
     MENOR = 20
@@ -114,16 +114,16 @@ class GramaticaLexer(Lexer):
             "PARENTESIS_INICIAL", "PARENTESIS_FINAL", "LLAVES_INICIAL", 
             "LLAVES_FINAL", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", "FOR", 
             "PRINT", "ASIGNACION", "MAS", "MENOS", "MULTIPLICACION", "DIVISION", 
-            "MODULO", "POW", "IGUAL", "DIFERENTE", "MENOR", "MAYOR", "MENOR_IGUAL_QUE", 
-            "MAYOR_IGUAL_QUE", "MASMAS", "MENOSMENOS", "VARIABLE", "NUMERO", 
-            "WS" ]
+            "MODULO", "POTENCIA", "IGUAL", "DIFERENTE", "MENOR", "MAYOR", 
+            "MENOR_IGUAL_QUE", "MAYOR_IGUAL_QUE", "MASMAS", "MENOSMENOS", 
+            "VARIABLE", "NUMERO", "WS" ]
 
     ruleNames = [ "PARENTESIS_INICIAL", "PARENTESIS_FINAL", "LLAVES_INICIAL", 
                   "LLAVES_FINAL", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", 
                   "FOR", "PRINT", "ASIGNACION", "MAS", "MENOS", "MULTIPLICACION", 
-                  "DIVISION", "MODULO", "POW", "IGUAL", "DIFERENTE", "MENOR", 
-                  "MAYOR", "MENOR_IGUAL_QUE", "MAYOR_IGUAL_QUE", "MASMAS", 
-                  "MENOSMENOS", "VARIABLE", "NUMERO", "WS" ]
+                  "DIVISION", "MODULO", "POTENCIA", "IGUAL", "DIFERENTE", 
+                  "MENOR", "MAYOR", "MENOR_IGUAL_QUE", "MAYOR_IGUAL_QUE", 
+                  "MASMAS", "MENOSMENOS", "VARIABLE", "NUMERO", "WS" ]
 
     grammarFileName = "Gramatica.g4"
 

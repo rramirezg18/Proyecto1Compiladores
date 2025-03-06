@@ -12,17 +12,18 @@ instruccion
     | sentencia_for
     ;
  
-// Declaración de variables (x = 10;)
+//reglas sintacticas
+// Declaración de variables x = 10;
 declaracion
     : asignacion_expr FIN_DE_LINEA
     ;
  
-// Asignación de valor a variables(x = 5 / 5;)
+// Asignación de valor a variables x = 5 / 5;
 asignacion_expr
     : VARIABLE ASIGNACION expr
     ;
  
-//(print(x); )
+//print(x); 
 sentencia_print
     : PRINT PARENTESIS_INICIAL expr PARENTESIS_FINAL FIN_DE_LINEA
     ;
@@ -31,20 +32,20 @@ sentencia_print
 sentencia_if
     : IF PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque
       (ELSE IF PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque)*  // cero o más else if
-      (ELSE bloque)?                                              // else opcional
+      (ELSE bloque)?                                              
     ;
  
-// While (ej: while (x < 10) { ... } )
+// while (x < 10) { ... } 
 sentencia_while
     : WHILE PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque
     ;
  
-// For (ej: for (i = 0; i < 10; i++) { ... } )
+// For for (i = 0; i < 10; i++) { ... }
 sentencia_for
     : FOR PARENTESIS_INICIAL for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento PARENTESIS_FINAL bloque
     ;
  
-// Inicialización en el ciclo for (puede ser asignación o incremento)
+// Inicialización en el ciclo for
 for_inicializacion
     : asignacion_expr?   // puede estar vacío
     ;
@@ -69,7 +70,7 @@ bloque
  
 expr
     // Potencia
-    : <assoc=right> expr POW expr
+    : <assoc=right> expr POTENCIA expr
     // Multiplicación, división, módulo
     | expr (MULTIPLICACION | DIVISION | MODULO) expr
     // Suma y resta
@@ -84,7 +85,7 @@ expr
     ;
  
 
-// TOKENS (LEXER)
+// Reglas lexicas
 PARENTESIS_INICIAL: '(';
 PARENTESIS_FINAL:   ')';
 LLAVES_INICIAL:     '{';
@@ -97,26 +98,27 @@ WHILE: 'while';
 FOR: 'for';
 PRINT: 'print';
  
+
 ASIGNACION: '=';
- 
+
+//Operadores matematicos
 MAS: '+';
 MENOS: '-';
 MULTIPLICACION: '*';
 DIVISION: '/';
 MODULO: '%';
-POW: '^';
- 
+POTENCIA: '^';
+
+//Operadores logicos
 IGUAL: '==';
 DIFERENTE: '!=';
 MENOR: '<';
 MAYOR: '>';
 MENOR_IGUAL_QUE: '<=';
 MAYOR_IGUAL_QUE: '>=';
- 
-// (opcional) i++ o i-- si se requiere, solo habría que añadir MASMAS / MENOSMENOS
 MASMAS: '++';
 MENOSMENOS: '--';
- 
+
 VARIABLE: [a-zA-Z_][a-zA-Z0-9_]*;
 NUMERO: [0-9]+ ('.' [0-9]+)?;  // enteros o decimales
  

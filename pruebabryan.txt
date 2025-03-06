@@ -1,0 +1,5 @@
+NumB = 2
+tren2 = 2;
+r = NumB + tren2;
+print(r);
+print(NumB + tren2);

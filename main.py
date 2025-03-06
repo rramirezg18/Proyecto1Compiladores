@@ -5,7 +5,7 @@ from GramaticaLexer import GramaticaLexer
 from GramaticaParser import GramaticaParser
 from visitor import AnalizadorVisitor
 
-#  para mostrar el error y donde ocurrio - errores de sintaxis
+#  para errores de sintaxis
 class ErrorListener(ErrorListener):
     def __init__(self):
         super(ErrorListener, self).__init__()

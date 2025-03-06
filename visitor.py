@@ -1,5 +1,7 @@
 from GramaticaVisitor import GramaticaVisitor
 
+#Visitor de las reglas sintacticas definidas en el archivo Gramatica.g4
+
 class AnalizadorVisitor(GramaticaVisitor):
     def __init__(self):
         self.env = {}  #almacenar variables
@@ -17,7 +19,7 @@ class AnalizadorVisitor(GramaticaVisitor):
         value = self.visit(ctx.expr())
         print(f"{value:.1f}")
         return value
-    #sentecias if - else if -else
+    #sentecias if  else if else
     def visitSentencia_if(self, ctx):
         if self.visit(ctx.expr(0)):
             return self.visit(ctx.bloque(0))
@@ -35,7 +37,7 @@ class AnalizadorVisitor(GramaticaVisitor):
             self.visit(ctx.bloque())
         return None
 
-    #para ciclos for (for(i=0; i<5; i++{sentencias})
+    #para ciclos for for(i=0; i<5; i++{sentencias}
     def visitSentencia_for(self, ctx):
         if ctx.for_inicializacion():
             self.visit(ctx.for_inicializacion())
@@ -80,7 +82,7 @@ class AnalizadorVisitor(GramaticaVisitor):
 
 
 
-    #para bloques de codigos con llaves o una sola instruccion
+    #para bloques de codigos con llaves
     def visitBloque(self, ctx):
         if ctx.getChildCount() >= 3 and ctx.getChild(0).getText() == '{':
             result = None
@@ -119,7 +121,7 @@ class AnalizadorVisitor(GramaticaVisitor):
                 elif op == '%':
                     return left % right
                 elif op == '^':
-                #operadores matematicos
+                #operadores logicos y asignacion
                     return left ** right
                 elif op == '==':
                     return left == right
