@@ -80,9 +80,7 @@ class AnalizadorVisitor(GramaticaVisitor):
             return self.visit(ctx.asignacion_expr())
         return None
 
-
-
-    #para bloques de codigos con llaves
+    #para bloques llaves
     def visitBloque(self, ctx):
         if ctx.getChildCount() >= 3 and ctx.getChild(0).getText() == '{':
             result = None
@@ -91,8 +89,14 @@ class AnalizadorVisitor(GramaticaVisitor):
             return result
         else:
             return self.visit(ctx)
+        
+
     #expreciones matematicas y logicas
     def visitExpr(self, ctx):
+        # -expr
+        if ctx.getChildCount() == 2 and ctx.getChild(0).getText() == '-':
+            return -self.visit(ctx.expr(0))
+        
         if ctx.getChildCount() == 1:
             token_text = ctx.getText()
             try:
@@ -102,14 +106,15 @@ class AnalizadorVisitor(GramaticaVisitor):
                     return self.env[token_text]
                 else:
                     raise Exception("Variable no definida: " + token_text)
+        
         elif ctx.getChildCount() == 3:
+            # expr
             if ctx.getChild(0).getText() == '(' and ctx.getChild(2).getText() == ')':
                 return self.visit(ctx.expr(0))
             else:
                 left = self.visit(ctx.expr(0))
                 op = ctx.getChild(1).getText()
                 right = self.visit(ctx.expr(1))
-                #operadores matematicos
                 if op == '+':
                     return left + right
                 elif op == '-':
@@ -121,7 +126,6 @@ class AnalizadorVisitor(GramaticaVisitor):
                 elif op == '%':
                     return left % right
                 elif op == '^':
-                #operadores logicos y asignacion
                     return left ** right
                 elif op == '==':
                     return left == right
@@ -137,5 +141,12 @@ class AnalizadorVisitor(GramaticaVisitor):
                     return left >= right
                 else:
                     raise Exception("Operador desconocido: " + op)
+        
         else:
             return self.visitChildren(ctx)
+        
+
+
+
+
+

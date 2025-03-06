@@ -69,8 +69,9 @@ bloque
     ;
  
 expr
+    : MENOS expr
     // Potencia
-    : <assoc=right> expr POTENCIA expr
+    | <assoc=right> expr POTENCIA expr
     // Multiplicación, división, módulo
     | expr (MULTIPLICACION | DIVISION | MODULO) expr
     // Suma y resta
