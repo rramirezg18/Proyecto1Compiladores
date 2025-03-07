@@ -10,51 +10,52 @@ else:
 
 def serializedATN():
     return [
-        4,1,27,137,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,1,0,4,0,
-        28,8,0,11,0,12,0,29,1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,39,8,1,1,2,1,
-        2,1,2,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,
-        5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,66,8,5,10,5,12,5,69,9,5,1,5,1,
-        5,3,5,73,8,5,1,6,1,6,1,6,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,
-        1,7,1,7,1,7,1,8,1,8,1,9,1,9,1,10,1,10,1,10,3,10,98,8,10,1,11,1,11,
-        5,11,102,8,11,10,11,12,11,105,9,11,1,11,1,11,1,12,1,12,1,12,1,12,
-        1,12,1,12,1,12,1,12,1,12,3,12,118,8,12,1,12,1,12,1,12,1,12,1,12,
-        1,12,1,12,1,12,1,12,1,12,1,12,1,12,5,12,132,8,12,10,12,12,12,135,
-        9,12,1,12,0,1,24,13,0,2,4,6,8,10,12,14,16,18,20,22,24,0,4,1,0,23,
-        24,1,0,14,15,1,0,12,13,1,0,17,22,139,0,27,1,0,0,0,2,38,1,0,0,0,4,
-        40,1,0,0,0,6,43,1,0,0,0,8,47,1,0,0,0,10,53,1,0,0,0,12,74,1,0,0,0,
-        14,80,1,0,0,0,16,90,1,0,0,0,18,92,1,0,0,0,20,97,1,0,0,0,22,99,1,
-        0,0,0,24,117,1,0,0,0,26,28,3,2,1,0,27,26,1,0,0,0,28,29,1,0,0,0,29,
-        27,1,0,0,0,29,30,1,0,0,0,30,31,1,0,0,0,31,32,5,0,0,1,32,1,1,0,0,
-        0,33,39,3,4,2,0,34,39,3,8,4,0,35,39,3,10,5,0,36,39,3,12,6,0,37,39,
-        3,14,7,0,38,33,1,0,0,0,38,34,1,0,0,0,38,35,1,0,0,0,38,36,1,0,0,0,
-        38,37,1,0,0,0,39,3,1,0,0,0,40,41,3,6,3,0,41,42,5,5,0,0,42,5,1,0,
-        0,0,43,44,5,25,0,0,44,45,5,11,0,0,45,46,3,24,12,0,46,7,1,0,0,0,47,
-        48,5,10,0,0,48,49,5,1,0,0,49,50,3,24,12,0,50,51,5,2,0,0,51,52,5,
-        5,0,0,52,9,1,0,0,0,53,54,5,6,0,0,54,55,5,1,0,0,55,56,3,24,12,0,56,
-        57,5,2,0,0,57,67,3,22,11,0,58,59,5,7,0,0,59,60,5,6,0,0,60,61,5,1,
-        0,0,61,62,3,24,12,0,62,63,5,2,0,0,63,64,3,22,11,0,64,66,1,0,0,0,
-        65,58,1,0,0,0,66,69,1,0,0,0,67,65,1,0,0,0,67,68,1,0,0,0,68,72,1,
-        0,0,0,69,67,1,0,0,0,70,71,5,7,0,0,71,73,3,22,11,0,72,70,1,0,0,0,
-        72,73,1,0,0,0,73,11,1,0,0,0,74,75,5,8,0,0,75,76,5,1,0,0,76,77,3,
-        24,12,0,77,78,5,2,0,0,78,79,3,22,11,0,79,13,1,0,0,0,80,81,5,9,0,
-        0,81,82,5,1,0,0,82,83,3,16,8,0,83,84,5,5,0,0,84,85,3,18,9,0,85,86,
-        5,5,0,0,86,87,3,20,10,0,87,88,5,2,0,0,88,89,3,22,11,0,89,15,1,0,
-        0,0,90,91,3,6,3,0,91,17,1,0,0,0,92,93,3,24,12,0,93,19,1,0,0,0,94,
-        95,5,25,0,0,95,98,7,0,0,0,96,98,3,6,3,0,97,94,1,0,0,0,97,96,1,0,
-        0,0,98,21,1,0,0,0,99,103,5,3,0,0,100,102,3,2,1,0,101,100,1,0,0,0,
-        102,105,1,0,0,0,103,101,1,0,0,0,103,104,1,0,0,0,104,106,1,0,0,0,
-        105,103,1,0,0,0,106,107,5,4,0,0,107,23,1,0,0,0,108,109,6,12,-1,0,
-        109,110,5,13,0,0,110,118,3,24,12,8,111,112,5,1,0,0,112,113,3,24,
-        12,0,113,114,5,2,0,0,114,118,1,0,0,0,115,118,5,25,0,0,116,118,5,
-        26,0,0,117,108,1,0,0,0,117,111,1,0,0,0,117,115,1,0,0,0,117,116,1,
-        0,0,0,118,133,1,0,0,0,119,120,10,7,0,0,120,121,5,16,0,0,121,132,
-        3,24,12,7,122,123,10,6,0,0,123,124,7,1,0,0,124,132,3,24,12,7,125,
-        126,10,5,0,0,126,127,7,2,0,0,127,132,3,24,12,6,128,129,10,4,0,0,
-        129,130,7,3,0,0,130,132,3,24,12,5,131,119,1,0,0,0,131,122,1,0,0,
-        0,131,125,1,0,0,0,131,128,1,0,0,0,132,135,1,0,0,0,133,131,1,0,0,
-        0,133,134,1,0,0,0,134,25,1,0,0,0,135,133,1,0,0,0,9,29,38,67,72,97,
-        103,117,131,133
+        4,1,27,140,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,1,0,1,0,
+        1,0,4,0,30,8,0,11,0,12,0,31,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,3,1,
+        42,8,1,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,5,1,
+        5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,69,8,5,10,5,12,5,72,
+        9,5,1,5,1,5,3,5,76,8,5,1,6,1,6,1,6,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,
+        7,1,7,1,7,1,7,1,7,1,7,1,8,1,8,1,9,1,9,1,10,1,10,1,10,3,10,101,8,
+        10,1,11,1,11,5,11,105,8,11,10,11,12,11,108,9,11,1,11,1,11,1,12,1,
+        12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,121,8,12,1,12,1,12,1,
+        12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,5,12,135,8,12,10,
+        12,12,12,138,9,12,1,12,0,1,24,13,0,2,4,6,8,10,12,14,16,18,20,22,
+        24,0,4,1,0,23,24,1,0,14,15,1,0,12,13,1,0,17,22,142,0,26,1,0,0,0,
+        2,41,1,0,0,0,4,43,1,0,0,0,6,46,1,0,0,0,8,50,1,0,0,0,10,56,1,0,0,
+        0,12,77,1,0,0,0,14,83,1,0,0,0,16,93,1,0,0,0,18,95,1,0,0,0,20,100,
+        1,0,0,0,22,102,1,0,0,0,24,120,1,0,0,0,26,27,5,25,0,0,27,29,5,3,0,
+        0,28,30,3,2,1,0,29,28,1,0,0,0,30,31,1,0,0,0,31,29,1,0,0,0,31,32,
+        1,0,0,0,32,33,1,0,0,0,33,34,5,4,0,0,34,35,5,0,0,1,35,1,1,0,0,0,36,
+        42,3,4,2,0,37,42,3,8,4,0,38,42,3,10,5,0,39,42,3,12,6,0,40,42,3,14,
+        7,0,41,36,1,0,0,0,41,37,1,0,0,0,41,38,1,0,0,0,41,39,1,0,0,0,41,40,
+        1,0,0,0,42,3,1,0,0,0,43,44,3,6,3,0,44,45,5,5,0,0,45,5,1,0,0,0,46,
+        47,5,25,0,0,47,48,5,11,0,0,48,49,3,24,12,0,49,7,1,0,0,0,50,51,5,
+        10,0,0,51,52,5,1,0,0,52,53,3,24,12,0,53,54,5,2,0,0,54,55,5,5,0,0,
+        55,9,1,0,0,0,56,57,5,6,0,0,57,58,5,1,0,0,58,59,3,24,12,0,59,60,5,
+        2,0,0,60,70,3,22,11,0,61,62,5,7,0,0,62,63,5,6,0,0,63,64,5,1,0,0,
+        64,65,3,24,12,0,65,66,5,2,0,0,66,67,3,22,11,0,67,69,1,0,0,0,68,61,
+        1,0,0,0,69,72,1,0,0,0,70,68,1,0,0,0,70,71,1,0,0,0,71,75,1,0,0,0,
+        72,70,1,0,0,0,73,74,5,7,0,0,74,76,3,22,11,0,75,73,1,0,0,0,75,76,
+        1,0,0,0,76,11,1,0,0,0,77,78,5,8,0,0,78,79,5,1,0,0,79,80,3,24,12,
+        0,80,81,5,2,0,0,81,82,3,22,11,0,82,13,1,0,0,0,83,84,5,9,0,0,84,85,
+        5,1,0,0,85,86,3,16,8,0,86,87,5,5,0,0,87,88,3,18,9,0,88,89,5,5,0,
+        0,89,90,3,20,10,0,90,91,5,2,0,0,91,92,3,22,11,0,92,15,1,0,0,0,93,
+        94,3,6,3,0,94,17,1,0,0,0,95,96,3,24,12,0,96,19,1,0,0,0,97,98,5,25,
+        0,0,98,101,7,0,0,0,99,101,3,6,3,0,100,97,1,0,0,0,100,99,1,0,0,0,
+        101,21,1,0,0,0,102,106,5,3,0,0,103,105,3,2,1,0,104,103,1,0,0,0,105,
+        108,1,0,0,0,106,104,1,0,0,0,106,107,1,0,0,0,107,109,1,0,0,0,108,
+        106,1,0,0,0,109,110,5,4,0,0,110,23,1,0,0,0,111,112,6,12,-1,0,112,
+        113,5,13,0,0,113,121,3,24,12,8,114,115,5,1,0,0,115,116,3,24,12,0,
+        116,117,5,2,0,0,117,121,1,0,0,0,118,121,5,25,0,0,119,121,5,26,0,
+        0,120,111,1,0,0,0,120,114,1,0,0,0,120,118,1,0,0,0,120,119,1,0,0,
+        0,121,136,1,0,0,0,122,123,10,7,0,0,123,124,5,16,0,0,124,135,3,24,
+        12,7,125,126,10,6,0,0,126,127,7,1,0,0,127,135,3,24,12,7,128,129,
+        10,5,0,0,129,130,7,2,0,0,130,135,3,24,12,6,131,132,10,4,0,0,132,
+        133,7,3,0,0,133,135,3,24,12,5,134,122,1,0,0,0,134,125,1,0,0,0,134,
+        128,1,0,0,0,134,131,1,0,0,0,135,138,1,0,0,0,136,134,1,0,0,0,136,
+        137,1,0,0,0,137,25,1,0,0,0,138,136,1,0,0,0,9,31,41,70,75,100,106,
+        120,134,136
     ]
 
 class GramaticaParser ( Parser ):
@@ -72,8 +73,8 @@ class GramaticaParser ( Parser ):
                      "'-'", "'*'", "'/'", "'^'", "'=='", "'!='", "'<'", 
                      "'>'", "'<='", "'>='", "'++'", "'--'" ]
 
-    symbolicNames = [ "<INVALID>", "PARENTESIS_INICIAL", "PARENTESIS_FINAL", 
-                      "LLAVES_INICIAL", "LLAVES_FINAL", "FIN_DE_LINEA", 
+    symbolicNames = [ "<INVALID>", "PARENTESIS_APERTURA", "PARENTESIS_CIERRE", 
+                      "LLAVE_APERTURA", "LLAVE_CIERRE", "FIN_DE_LINEA", 
                       "IF", "ELSE", "WHILE", "FOR", "PRINT", "ASIGNACION", 
                       "MAS", "MENOS", "MULTIPLICACION", "DIVISION", "POTENCIA", 
                       "IGUAL", "DIFERENTE", "MENOR", "MAYOR", "MENOR_IGUAL_QUE", 
@@ -100,10 +101,10 @@ class GramaticaParser ( Parser ):
                    "for_incremento_y_disminucion", "bloque", "expr" ]
 
     EOF = Token.EOF
-    PARENTESIS_INICIAL=1
-    PARENTESIS_FINAL=2
-    LLAVES_INICIAL=3
-    LLAVES_FINAL=4
+    PARENTESIS_APERTURA=1
+    PARENTESIS_CIERRE=2
+    LLAVE_APERTURA=3
+    LLAVE_CIERRE=4
     FIN_DE_LINEA=5
     IF=6
     ELSE=7
@@ -144,6 +145,15 @@ class GramaticaParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def VARIABLE(self):
+            return self.getToken(GramaticaParser.VARIABLE, 0)
+
+        def LLAVE_APERTURA(self):
+            return self.getToken(GramaticaParser.LLAVE_APERTURA, 0)
+
+        def LLAVE_CIERRE(self):
+            return self.getToken(GramaticaParser.LLAVE_CIERRE, 0)
+
         def EOF(self):
             return self.getToken(GramaticaParser.EOF, 0)
 
@@ -181,19 +191,25 @@ class GramaticaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 27 
+            self.state = 26
+            self.match(GramaticaParser.VARIABLE)
+            self.state = 27
+            self.match(GramaticaParser.LLAVE_APERTURA)
+            self.state = 29 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 26
+                self.state = 28
                 self.instruccion()
-                self.state = 29 
+                self.state = 31 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 33556288) != 0)):
                     break
 
-            self.state = 31
+            self.state = 33
+            self.match(GramaticaParser.LLAVE_CIERRE)
+            self.state = 34
             self.match(GramaticaParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -256,32 +272,32 @@ class GramaticaParser ( Parser ):
         localctx = GramaticaParser.InstruccionContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_instruccion)
         try:
-            self.state = 38
+            self.state = 41
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [25]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 33
+                self.state = 36
                 self.declaracion()
                 pass
             elif token in [10]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 34
+                self.state = 37
                 self.sentencia_print()
                 pass
             elif token in [6]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 35
+                self.state = 38
                 self.sentencia_if()
                 pass
             elif token in [8]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 36
+                self.state = 39
                 self.sentencia_while()
                 pass
             elif token in [9]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 37
+                self.state = 40
                 self.sentencia_for()
                 pass
             else:
@@ -336,9 +352,9 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_declaracion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 40
+            self.state = 43
             self.asignacion_expr()
-            self.state = 41
+            self.state = 44
             self.match(GramaticaParser.FIN_DE_LINEA)
         except RecognitionException as re:
             localctx.exception = re
@@ -392,11 +408,11 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_asignacion_expr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 43
+            self.state = 46
             self.match(GramaticaParser.VARIABLE)
-            self.state = 44
+            self.state = 47
             self.match(GramaticaParser.ASIGNACION)
-            self.state = 45
+            self.state = 48
             self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -417,15 +433,15 @@ class GramaticaParser ( Parser ):
         def PRINT(self):
             return self.getToken(GramaticaParser.PRINT, 0)
 
-        def PARENTESIS_INICIAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_INICIAL, 0)
+        def PARENTESIS_APERTURA(self):
+            return self.getToken(GramaticaParser.PARENTESIS_APERTURA, 0)
 
         def expr(self):
             return self.getTypedRuleContext(GramaticaParser.ExprContext,0)
 
 
-        def PARENTESIS_FINAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_FINAL, 0)
+        def PARENTESIS_CIERRE(self):
+            return self.getToken(GramaticaParser.PARENTESIS_CIERRE, 0)
 
         def FIN_DE_LINEA(self):
             return self.getToken(GramaticaParser.FIN_DE_LINEA, 0)
@@ -456,15 +472,15 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_sentencia_print)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 47
-            self.match(GramaticaParser.PRINT)
-            self.state = 48
-            self.match(GramaticaParser.PARENTESIS_INICIAL)
-            self.state = 49
-            self.expr(0)
             self.state = 50
-            self.match(GramaticaParser.PARENTESIS_FINAL)
+            self.match(GramaticaParser.PRINT)
             self.state = 51
+            self.match(GramaticaParser.PARENTESIS_APERTURA)
+            self.state = 52
+            self.expr(0)
+            self.state = 53
+            self.match(GramaticaParser.PARENTESIS_CIERRE)
+            self.state = 54
             self.match(GramaticaParser.FIN_DE_LINEA)
         except RecognitionException as re:
             localctx.exception = re
@@ -488,11 +504,11 @@ class GramaticaParser ( Parser ):
             else:
                 return self.getToken(GramaticaParser.IF, i)
 
-        def PARENTESIS_INICIAL(self, i:int=None):
+        def PARENTESIS_APERTURA(self, i:int=None):
             if i is None:
-                return self.getTokens(GramaticaParser.PARENTESIS_INICIAL)
+                return self.getTokens(GramaticaParser.PARENTESIS_APERTURA)
             else:
-                return self.getToken(GramaticaParser.PARENTESIS_INICIAL, i)
+                return self.getToken(GramaticaParser.PARENTESIS_APERTURA, i)
 
         def expr(self, i:int=None):
             if i is None:
@@ -501,11 +517,11 @@ class GramaticaParser ( Parser ):
                 return self.getTypedRuleContext(GramaticaParser.ExprContext,i)
 
 
-        def PARENTESIS_FINAL(self, i:int=None):
+        def PARENTESIS_CIERRE(self, i:int=None):
             if i is None:
-                return self.getTokens(GramaticaParser.PARENTESIS_FINAL)
+                return self.getTokens(GramaticaParser.PARENTESIS_CIERRE)
             else:
-                return self.getToken(GramaticaParser.PARENTESIS_FINAL, i)
+                return self.getToken(GramaticaParser.PARENTESIS_CIERRE, i)
 
         def bloque(self, i:int=None):
             if i is None:
@@ -547,44 +563,44 @@ class GramaticaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 53
-            self.match(GramaticaParser.IF)
-            self.state = 54
-            self.match(GramaticaParser.PARENTESIS_INICIAL)
-            self.state = 55
-            self.expr(0)
             self.state = 56
-            self.match(GramaticaParser.PARENTESIS_FINAL)
+            self.match(GramaticaParser.IF)
             self.state = 57
+            self.match(GramaticaParser.PARENTESIS_APERTURA)
+            self.state = 58
+            self.expr(0)
+            self.state = 59
+            self.match(GramaticaParser.PARENTESIS_CIERRE)
+            self.state = 60
             self.bloque()
-            self.state = 67
+            self.state = 70
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 58
-                    self.match(GramaticaParser.ELSE)
-                    self.state = 59
-                    self.match(GramaticaParser.IF)
-                    self.state = 60
-                    self.match(GramaticaParser.PARENTESIS_INICIAL)
                     self.state = 61
-                    self.expr(0)
+                    self.match(GramaticaParser.ELSE)
                     self.state = 62
-                    self.match(GramaticaParser.PARENTESIS_FINAL)
+                    self.match(GramaticaParser.IF)
                     self.state = 63
+                    self.match(GramaticaParser.PARENTESIS_APERTURA)
+                    self.state = 64
+                    self.expr(0)
+                    self.state = 65
+                    self.match(GramaticaParser.PARENTESIS_CIERRE)
+                    self.state = 66
                     self.bloque() 
-                self.state = 69
+                self.state = 72
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 
-            self.state = 72
+            self.state = 75
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==7:
-                self.state = 70
+                self.state = 73
                 self.match(GramaticaParser.ELSE)
-                self.state = 71
+                self.state = 74
                 self.bloque()
 
 
@@ -607,15 +623,15 @@ class GramaticaParser ( Parser ):
         def WHILE(self):
             return self.getToken(GramaticaParser.WHILE, 0)
 
-        def PARENTESIS_INICIAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_INICIAL, 0)
+        def PARENTESIS_APERTURA(self):
+            return self.getToken(GramaticaParser.PARENTESIS_APERTURA, 0)
 
         def expr(self):
             return self.getTypedRuleContext(GramaticaParser.ExprContext,0)
 
 
-        def PARENTESIS_FINAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_FINAL, 0)
+        def PARENTESIS_CIERRE(self):
+            return self.getToken(GramaticaParser.PARENTESIS_CIERRE, 0)
 
         def bloque(self):
             return self.getTypedRuleContext(GramaticaParser.BloqueContext,0)
@@ -647,15 +663,15 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_sentencia_while)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 74
-            self.match(GramaticaParser.WHILE)
-            self.state = 75
-            self.match(GramaticaParser.PARENTESIS_INICIAL)
-            self.state = 76
-            self.expr(0)
             self.state = 77
-            self.match(GramaticaParser.PARENTESIS_FINAL)
+            self.match(GramaticaParser.WHILE)
             self.state = 78
+            self.match(GramaticaParser.PARENTESIS_APERTURA)
+            self.state = 79
+            self.expr(0)
+            self.state = 80
+            self.match(GramaticaParser.PARENTESIS_CIERRE)
+            self.state = 81
             self.bloque()
         except RecognitionException as re:
             localctx.exception = re
@@ -676,8 +692,8 @@ class GramaticaParser ( Parser ):
         def FOR(self):
             return self.getToken(GramaticaParser.FOR, 0)
 
-        def PARENTESIS_INICIAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_INICIAL, 0)
+        def PARENTESIS_APERTURA(self):
+            return self.getToken(GramaticaParser.PARENTESIS_APERTURA, 0)
 
         def for_inicializacion(self):
             return self.getTypedRuleContext(GramaticaParser.For_inicializacionContext,0)
@@ -697,8 +713,8 @@ class GramaticaParser ( Parser ):
             return self.getTypedRuleContext(GramaticaParser.For_incremento_y_disminucionContext,0)
 
 
-        def PARENTESIS_FINAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_FINAL, 0)
+        def PARENTESIS_CIERRE(self):
+            return self.getToken(GramaticaParser.PARENTESIS_CIERRE, 0)
 
         def bloque(self):
             return self.getTypedRuleContext(GramaticaParser.BloqueContext,0)
@@ -730,23 +746,23 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_sentencia_for)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 80
-            self.match(GramaticaParser.FOR)
-            self.state = 81
-            self.match(GramaticaParser.PARENTESIS_INICIAL)
-            self.state = 82
-            self.for_inicializacion()
             self.state = 83
-            self.match(GramaticaParser.FIN_DE_LINEA)
+            self.match(GramaticaParser.FOR)
             self.state = 84
-            self.for_condicion()
+            self.match(GramaticaParser.PARENTESIS_APERTURA)
             self.state = 85
-            self.match(GramaticaParser.FIN_DE_LINEA)
+            self.for_inicializacion()
             self.state = 86
-            self.for_incremento_y_disminucion()
+            self.match(GramaticaParser.FIN_DE_LINEA)
             self.state = 87
-            self.match(GramaticaParser.PARENTESIS_FINAL)
+            self.for_condicion()
             self.state = 88
+            self.match(GramaticaParser.FIN_DE_LINEA)
+            self.state = 89
+            self.for_incremento_y_disminucion()
+            self.state = 90
+            self.match(GramaticaParser.PARENTESIS_CIERRE)
+            self.state = 91
             self.bloque()
         except RecognitionException as re:
             localctx.exception = re
@@ -794,7 +810,7 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_for_inicializacion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 90
+            self.state = 93
             self.asignacion_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -842,7 +858,7 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_for_condicion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 92
+            self.state = 95
             self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -899,14 +915,14 @@ class GramaticaParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_for_incremento_y_disminucion)
         self._la = 0 # Token type
         try:
-            self.state = 97
+            self.state = 100
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 94
+                self.state = 97
                 self.match(GramaticaParser.VARIABLE)
-                self.state = 95
+                self.state = 98
                 _la = self._input.LA(1)
                 if not(_la==23 or _la==24):
                     self._errHandler.recoverInline(self)
@@ -917,7 +933,7 @@ class GramaticaParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 96
+                self.state = 99
                 self.asignacion_expr()
                 pass
 
@@ -938,11 +954,11 @@ class GramaticaParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def LLAVES_INICIAL(self):
-            return self.getToken(GramaticaParser.LLAVES_INICIAL, 0)
+        def LLAVE_APERTURA(self):
+            return self.getToken(GramaticaParser.LLAVE_APERTURA, 0)
 
-        def LLAVES_FINAL(self):
-            return self.getToken(GramaticaParser.LLAVES_FINAL, 0)
+        def LLAVE_CIERRE(self):
+            return self.getToken(GramaticaParser.LLAVE_CIERRE, 0)
 
         def instruccion(self, i:int=None):
             if i is None:
@@ -978,20 +994,20 @@ class GramaticaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 99
-            self.match(GramaticaParser.LLAVES_INICIAL)
-            self.state = 103
+            self.state = 102
+            self.match(GramaticaParser.LLAVE_APERTURA)
+            self.state = 106
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & 33556288) != 0):
-                self.state = 100
+                self.state = 103
                 self.instruccion()
-                self.state = 105
+                self.state = 108
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 106
-            self.match(GramaticaParser.LLAVES_FINAL)
+            self.state = 109
+            self.match(GramaticaParser.LLAVE_CIERRE)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1018,11 +1034,11 @@ class GramaticaParser ( Parser ):
                 return self.getTypedRuleContext(GramaticaParser.ExprContext,i)
 
 
-        def PARENTESIS_INICIAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_INICIAL, 0)
+        def PARENTESIS_APERTURA(self):
+            return self.getToken(GramaticaParser.PARENTESIS_APERTURA, 0)
 
-        def PARENTESIS_FINAL(self):
-            return self.getToken(GramaticaParser.PARENTESIS_FINAL, 0)
+        def PARENTESIS_CIERRE(self):
+            return self.getToken(GramaticaParser.PARENTESIS_CIERRE, 0)
 
         def VARIABLE(self):
             return self.getToken(GramaticaParser.VARIABLE, 0)
@@ -1089,36 +1105,36 @@ class GramaticaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 117
+            self.state = 120
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [13]:
-                self.state = 109
+                self.state = 112
                 self.match(GramaticaParser.MENOS)
-                self.state = 110
+                self.state = 113
                 self.expr(8)
                 pass
             elif token in [1]:
-                self.state = 111
-                self.match(GramaticaParser.PARENTESIS_INICIAL)
-                self.state = 112
+                self.state = 114
+                self.match(GramaticaParser.PARENTESIS_APERTURA)
+                self.state = 115
                 self.expr(0)
-                self.state = 113
-                self.match(GramaticaParser.PARENTESIS_FINAL)
+                self.state = 116
+                self.match(GramaticaParser.PARENTESIS_CIERRE)
                 pass
             elif token in [25]:
-                self.state = 115
+                self.state = 118
                 self.match(GramaticaParser.VARIABLE)
                 pass
             elif token in [26]:
-                self.state = 116
+                self.state = 119
                 self.match(GramaticaParser.NUMERO)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 133
+            self.state = 136
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1126,78 +1142,78 @@ class GramaticaParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 131
+                    self.state = 134
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
                     if la_ == 1:
                         localctx = GramaticaParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 119
+                        self.state = 122
                         if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 120
+                        self.state = 123
                         self.match(GramaticaParser.POTENCIA)
-                        self.state = 121
+                        self.state = 124
                         self.expr(7)
                         pass
 
                     elif la_ == 2:
                         localctx = GramaticaParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 122
+                        self.state = 125
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 123
+                        self.state = 126
                         _la = self._input.LA(1)
                         if not(_la==14 or _la==15):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 124
+                        self.state = 127
                         self.expr(7)
                         pass
 
                     elif la_ == 3:
                         localctx = GramaticaParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 125
+                        self.state = 128
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 126
+                        self.state = 129
                         _la = self._input.LA(1)
                         if not(_la==12 or _la==13):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 127
+                        self.state = 130
                         self.expr(6)
                         pass
 
                     elif la_ == 4:
                         localctx = GramaticaParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 128
+                        self.state = 131
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 129
+                        self.state = 132
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8257536) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 130
+                        self.state = 133
                         self.expr(5)
                         pass
 
              
-                self.state = 135
+                self.state = 138
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 

@@ -70,10 +70,10 @@ class GramaticaLexer(Lexer):
 
     decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
 
-    PARENTESIS_INICIAL = 1
-    PARENTESIS_FINAL = 2
-    LLAVES_INICIAL = 3
-    LLAVES_FINAL = 4
+    PARENTESIS_APERTURA = 1
+    PARENTESIS_CIERRE = 2
+    LLAVE_APERTURA = 3
+    LLAVE_CIERRE = 4
     FIN_DE_LINEA = 5
     IF = 6
     ELSE = 7
@@ -108,15 +108,15 @@ class GramaticaLexer(Lexer):
             "'=='", "'!='", "'<'", "'>'", "'<='", "'>='", "'++'", "'--'" ]
 
     symbolicNames = [ "<INVALID>",
-            "PARENTESIS_INICIAL", "PARENTESIS_FINAL", "LLAVES_INICIAL", 
-            "LLAVES_FINAL", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", "FOR", 
+            "PARENTESIS_APERTURA", "PARENTESIS_CIERRE", "LLAVE_APERTURA", 
+            "LLAVE_CIERRE", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", "FOR", 
             "PRINT", "ASIGNACION", "MAS", "MENOS", "MULTIPLICACION", "DIVISION", 
             "POTENCIA", "IGUAL", "DIFERENTE", "MENOR", "MAYOR", "MENOR_IGUAL_QUE", 
             "MAYOR_IGUAL_QUE", "MASMAS", "MENOSMENOS", "VARIABLE", "NUMERO", 
             "WS" ]
 
-    ruleNames = [ "PARENTESIS_INICIAL", "PARENTESIS_FINAL", "LLAVES_INICIAL", 
-                  "LLAVES_FINAL", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", 
+    ruleNames = [ "PARENTESIS_APERTURA", "PARENTESIS_CIERRE", "LLAVE_APERTURA", 
+                  "LLAVE_CIERRE", "FIN_DE_LINEA", "IF", "ELSE", "WHILE", 
                   "FOR", "PRINT", "ASIGNACION", "MAS", "MENOS", "MULTIPLICACION", 
                   "DIVISION", "POTENCIA", "IGUAL", "DIFERENTE", "MENOR", 
                   "MAYOR", "MENOR_IGUAL_QUE", "MAYOR_IGUAL_QUE", "MASMAS", 

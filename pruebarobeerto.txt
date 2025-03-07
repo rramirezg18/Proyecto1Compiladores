@@ -1,5 +1,7 @@
-x = 5;
-if(5 == 5){
-x = 10;
-print(x);
+programa{
+	x = 5;
+	if(5 == 5){
+	x = 10;
+	print(x);
+	}
 }

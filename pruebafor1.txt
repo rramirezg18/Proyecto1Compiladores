@@ -1,3 +1,5 @@
-for (i = 0; i < 5; i++) {
-    print(i);
+programa{
+	for (i = 0; i < 5; i++) {
+	    print(i);
+	}
 }

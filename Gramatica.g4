@@ -1,8 +1,8 @@
 grammar Gramatica;
  
 gramatica
-    : instruccion+ EOF
-    ;
+    : VARIABLE LLAVE_APERTURA instruccion+ LLAVE_CIERRE EOF
+    ;//nombrePrgorama{instrucciones}
 
 instruccion
     : declaracion
@@ -25,24 +25,24 @@ asignacion_expr
  
 //print(x); 
 sentencia_print
-    : PRINT PARENTESIS_INICIAL expr PARENTESIS_FINAL FIN_DE_LINEA
+    : PRINT PARENTESIS_APERTURA expr PARENTESIS_CIERRE FIN_DE_LINEA
     ;
  
 // If con else if y else
 sentencia_if
-    : IF PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque
-      (ELSE IF PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque)*  // cero o más else if
+    : IF PARENTESIS_APERTURA expr PARENTESIS_CIERRE bloque
+      (ELSE IF PARENTESIS_APERTURA expr PARENTESIS_CIERRE bloque)*  // cero o más else if
       (ELSE bloque)?                                              
     ;
  
 // while (x < 10) { bloque } 
 sentencia_while
-    : WHILE PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque
+    : WHILE PARENTESIS_APERTURA expr PARENTESIS_CIERRE bloque
     ;
  
 // For for (i = 0; i < 10; i++) { bloque }
 sentencia_for
-    : FOR PARENTESIS_INICIAL for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento_y_disminucion PARENTESIS_FINAL bloque
+    : FOR PARENTESIS_APERTURA for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento_y_disminucion PARENTESIS_CIERRE bloque
     ;
  
 // Inicialización en el ciclo for
@@ -64,7 +64,7 @@ for_incremento_y_disminucion
  
 // Bloque: 
 bloque
-    : LLAVES_INICIAL instruccion* LLAVES_FINAL
+    : LLAVE_APERTURA instruccion* LLAVE_CIERRE
     ;
  
 expr
@@ -78,7 +78,7 @@ expr
     //Operadores para validar
     | expr (MAYOR | MENOR | MAYOR_IGUAL_QUE | MENOR_IGUAL_QUE | IGUAL | DIFERENTE) expr
     //Paréntesis
-    | PARENTESIS_INICIAL expr PARENTESIS_FINAL
+    | PARENTESIS_APERTURA expr PARENTESIS_CIERRE
     // Variable o número
     | VARIABLE
     | NUMERO
@@ -86,10 +86,10 @@ expr
  
 
 // Reglas lexicas
-PARENTESIS_INICIAL: '(';
-PARENTESIS_FINAL:   ')';
-LLAVES_INICIAL:     '{';
-LLAVES_FINAL:       '}';
+PARENTESIS_APERTURA: '(';
+PARENTESIS_CIERRE:   ')';
+LLAVE_APERTURA:     '{';
+LLAVE_CIERRE:       '}';
 FIN_DE_LINEA:       ';';
  
 IF: 'if';

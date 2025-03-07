@@ -1,6 +1,8 @@
+programa{
 x = 2;
 if (x > 3) {
     print(100);
 } else {
     print(200);
+}
 }

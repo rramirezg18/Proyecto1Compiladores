@@ -1,3 +1,4 @@
+programa{
 x = 7;
 if (x < 5) {
     print(1);
@@ -5,4 +6,5 @@ if (x < 5) {
     print(2);
 } else {
     print(3);
+}
 }
