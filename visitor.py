@@ -1,6 +1,6 @@
 from GramaticaVisitor import GramaticaVisitor
 
-#Visitor de las reglas sintacticas definidas en el archivo Gramatica.g4
+#Visitor de las reglas definidas en el archivo Gramatica.g4
 
 class AnalizadorVisitor(GramaticaVisitor):
     def __init__(self):
@@ -10,14 +10,14 @@ class AnalizadorVisitor(GramaticaVisitor):
         return self.visit(ctx.asignacion_expr())
     #Para asignar valor a variables
     def visitAsignacion_expr(self, ctx):
-        var_name = ctx.VARIABLE().getText()
+        var_name = ctx.VARIABLE().getText()#obtiene nombre de la variable
         value = self.visit(ctx.expr())
-        self.env[var_name] = value
+        self.env[var_name] = value #guarda el valor de la variable
         return value
     #mostrar resultados en pantalla print(x) por ejemplo
     def visitSentencia_print(self, ctx):
         value = self.visit(ctx.expr())
-        print(f"{value:.1f}")
+        print(f"{value:.1f}") #1 decimal 
         return value
     #sentecias if  else if else
     def visitSentencia_if(self, ctx):
@@ -48,8 +48,8 @@ class AnalizadorVisitor(GramaticaVisitor):
             if not cond:
                 break
             self.visit(ctx.bloque())
-            if ctx.for_incremento():
-                self.visit(ctx.for_incremento())
+            if ctx.for_incremento_y_disminucion():
+                self.visit(ctx.for_incremento_y_disminucion())
         return None
     #para inicializar for
     def visitFor_inicializacion(self, ctx):
@@ -63,7 +63,7 @@ class AnalizadorVisitor(GramaticaVisitor):
         return True
 
     # Para el incremento del for
-    def visitFor_incremento(self, ctx):
+    def visitFor_incremento_y_disminucion(self, ctx):
         if ctx.MASMAS():  # i++
             var_name = ctx.VARIABLE().getText()  # obtener el nombre de la variable
             if var_name in self.env:
@@ -71,7 +71,7 @@ class AnalizadorVisitor(GramaticaVisitor):
             else:
                 raise Exception(f"Variable no definida: {var_name}")
         elif ctx.MENOSMENOS():  # i--
-            var_name = ctx.VARIABLE().getText()  # obtener el nombre de la variable
+            var_name = ctx.VARIABLE().getText() 
             if var_name in self.env:
                 self.env[var_name] -= 1
             else:
@@ -80,16 +80,13 @@ class AnalizadorVisitor(GramaticaVisitor):
             return self.visit(ctx.asignacion_expr())
         return None
 
-    #para bloques llaves
+    #para bloques en llaves
     def visitBloque(self, ctx):
-        if ctx.getChildCount() >= 3 and ctx.getChild(0).getText() == '{':
-            result = None
-            for instr in ctx.instruccion():
-                result = self.visit(instr)
-            return result
-        else:
-            return self.visit(ctx)
-        
+        result = None
+        for instr in ctx.instruccion():
+            result = self.visit(instr)
+        return result
+
 
     #expreciones matematicas y logicas
     def visitExpr(self, ctx):
@@ -123,8 +120,6 @@ class AnalizadorVisitor(GramaticaVisitor):
                     return left * right
                 elif op == '/':
                     return left / right
-                elif op == '%':
-                    return left % right
                 elif op == '^':
                     return left ** right
                 elif op == '==':

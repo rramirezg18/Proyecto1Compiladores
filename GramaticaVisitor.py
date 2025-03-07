@@ -59,8 +59,8 @@ class GramaticaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by GramaticaParser#for_incremento.
-    def visitFor_incremento(self, ctx:GramaticaParser.For_incrementoContext):
+    # Visit a parse tree produced by GramaticaParser#for_incremento_y_disminucion.
+    def visitFor_incremento_y_disminucion(self, ctx:GramaticaParser.For_incremento_y_disminucionContext):
         return self.visitChildren(ctx)
 
 

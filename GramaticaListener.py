@@ -98,12 +98,12 @@ class GramaticaListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by GramaticaParser#for_incremento.
-    def enterFor_incremento(self, ctx:GramaticaParser.For_incrementoContext):
+    # Enter a parse tree produced by GramaticaParser#for_incremento_y_disminucion.
+    def enterFor_incremento_y_disminucion(self, ctx:GramaticaParser.For_incremento_y_disminucionContext):
         pass
 
-    # Exit a parse tree produced by GramaticaParser#for_incremento.
-    def exitFor_incremento(self, ctx:GramaticaParser.For_incrementoContext):
+    # Exit a parse tree produced by GramaticaParser#for_incremento_y_disminucion.
+    def exitFor_incremento_y_disminucion(self, ctx:GramaticaParser.For_incremento_y_disminucionContext):
         pass
 
 

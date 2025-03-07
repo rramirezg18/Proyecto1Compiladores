@@ -35,37 +35,36 @@ sentencia_if
       (ELSE bloque)?                                              
     ;
  
-// while (x < 10) { ... } 
+// while (x < 10) { bloque } 
 sentencia_while
     : WHILE PARENTESIS_INICIAL expr PARENTESIS_FINAL bloque
     ;
  
-// For for (i = 0; i < 10; i++) { ... }
+// For for (i = 0; i < 10; i++) { bloque }
 sentencia_for
-    : FOR PARENTESIS_INICIAL for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento PARENTESIS_FINAL bloque
+    : FOR PARENTESIS_INICIAL for_inicializacion FIN_DE_LINEA for_condicion FIN_DE_LINEA for_incremento_y_disminucion PARENTESIS_FINAL bloque
     ;
  
 // Inicialización en el ciclo for
 for_inicializacion
-    : asignacion_expr?   // puede estar vacío
+    : asignacion_expr
     ;
 
-// Condición del for (i < 10)
+// Condición del for (i < 10, i >= 8)
 for_condicion
-    : expr?              // puede estar vacío
+    : expr
     ;
  
-// Incremento del for (i++, i--, i = i + 1)
-for_incremento
+// Incremento del for i++, i--, i = i + 1
+for_incremento_y_disminucion
     : VARIABLE (MASMAS | MENOSMENOS)   // i++ o i--
     | asignacion_expr                  // i = i + 1
     ;
 
  
-// Bloque: { instruccion* } o una sola instruccion
+// Bloque: 
 bloque
     : LLAVES_INICIAL instruccion* LLAVES_FINAL
-    | instruccion
     ;
  
 expr
@@ -73,10 +72,10 @@ expr
     // Potencia
     | <assoc=right> expr POTENCIA expr
     // Multiplicación, división, módulo
-    | expr (MULTIPLICACION | DIVISION | MODULO) expr
+    | expr (MULTIPLICACION | DIVISION) expr
     // Suma y resta
     | expr (MAS | MENOS) expr
-    //Operadores relacionales
+    //Operadores para validar
     | expr (MAYOR | MENOR | MAYOR_IGUAL_QUE | MENOR_IGUAL_QUE | IGUAL | DIFERENTE) expr
     //Paréntesis
     | PARENTESIS_INICIAL expr PARENTESIS_FINAL
@@ -107,10 +106,9 @@ MAS: '+';
 MENOS: '-';
 MULTIPLICACION: '*';
 DIVISION: '/';
-MODULO: '%';
 POTENCIA: '^';
 
-//Operadores logicos
+//Operadores para validar
 IGUAL: '==';
 DIFERENTE: '!=';
 MENOR: '<';
