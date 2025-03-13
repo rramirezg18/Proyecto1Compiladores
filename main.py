@@ -9,17 +9,18 @@ from visitor import AnalizadorVisitor
 class ErrorListener(ErrorListener):
     def __init__(self):
         super(ErrorListener, self).__init__()
-
+    # caputa los errores en sintaxis
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
         raise Exception(f"Error sintáctico en la línea {line}, columna {column}: {msg}")
 
 def main(argv):
-    if len(argv) < 2:
+    if len(argv) < 2:#valida que se pase el archivo
         print("Uso: python3 main.py <archivo>")
         return
-
+    #lee el archivo.txt
     input_file = argv[1]
     input_stream = FileStream(input_file, encoding="utf-8")
+    #lexer y tokens
     lexer = GramaticaLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = GramaticaParser(stream)

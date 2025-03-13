@@ -39,10 +39,12 @@ class AnalizadorVisitor(GramaticaVisitor):
 
     #para ciclos for for(i=0; i<5; i++{sentencias}
     def visitSentencia_for(self, ctx):
+        #evalua la inicializacion del for 
         if ctx.for_inicializacion():
             self.visit(ctx.for_inicializacion())
         while True:
             cond = True
+            #evalua la condicion 
             if ctx.for_condicion() and ctx.for_condicion().getText().strip() != "":
                 cond = self.visit(ctx.for_condicion())
             if not cond:
@@ -53,51 +55,51 @@ class AnalizadorVisitor(GramaticaVisitor):
         return None
     #para inicializar for
     def visitFor_inicializacion(self, ctx):
-        if ctx.asignacion_expr():
+        if ctx.asignacion_expr():#se evalua la asignacion de variable dento del for
             return self.visit(ctx.asignacion_expr())
         return None
     #condicion del fo
     def visitFor_condicion(self, ctx):
-        if ctx.expr():
+        if ctx.expr():#evalua la ls expresion
             return self.visit(ctx.expr())
         return True
 
-    # Para el incremento del for
+    # Para el incremento y disminucion del for
     def visitFor_incremento_y_disminucion(self, ctx):
         if ctx.MASMAS():  # i++
             var_name = ctx.VARIABLE().getText()  # obtener el nombre de la variable
-            if var_name in self.env:
-                self.env[var_name] += 1
+            if var_name in self.env:#validamos si existe
+                self.env[var_name] += 1#incrementa
             else:
                 raise Exception(f"Variable no definida: {var_name}")
         elif ctx.MENOSMENOS():  # i--
             var_name = ctx.VARIABLE().getText() 
-            if var_name in self.env:
+            if var_name in self.env: 
                 self.env[var_name] -= 1
             else:
-                raise Exception(f"Variable no definida: {var_name}")
+                raise Exception(f"Variable no definida: {var_name}")#posibles variables no definidas
         elif ctx.asignacion_expr():  # i = i + 1, i = 2, etc.
             return self.visit(ctx.asignacion_expr())
         return None
 
     #para bloques en llaves
     def visitBloque(self, ctx):
-        result = None
-        for instr in ctx.instruccion():
+        result = None#variable para guardar el valor de la ultima instruccion
+        for instr in ctx.instruccion():#Iteramos sobre todas las instrucciones en un bloque
             result = self.visit(instr)
-        return result
+        return result#retorna el ultimo valor
 
 
     #expreciones matematicas y logicas
     def visitExpr(self, ctx):
         # -expr
-        if ctx.getChildCount() == 2 and ctx.getChild(0).getText() == '-':
+        if ctx.getChildCount() == 2 and ctx.getChild(0).getText() == '-':#cuando es un numero negativo
             return -self.visit(ctx.expr(0))
         
-        if ctx.getChildCount() == 1:
+        if ctx.getChildCount() == 1:#con un solo termino
             token_text = ctx.getText()
             try:
-                return float(token_text)
+                return float(token_text)#devuelve el numero como float
             except ValueError:
                 if token_text in self.env:
                     return self.env[token_text]
@@ -106,13 +108,13 @@ class AnalizadorVisitor(GramaticaVisitor):
         
         elif ctx.getChildCount() == 3:
             # expr
-            if ctx.getChild(0).getText() == '(' and ctx.getChild(2).getText() == ')':
+            if ctx.getChild(0).getText() == '(' and ctx.getChild(2).getText() == ')':#sila expresion esta en parentesis la evalua
                 return self.visit(ctx.expr(0))
             else:
-                left = self.visit(ctx.expr(0))
-                op = ctx.getChild(1).getText()
-                right = self.visit(ctx.expr(1))
-                if op == '+':
+                left = self.visit(ctx.expr(0))#caracter a la izquierda de la operacion
+                op = ctx.getChild(1).getText()#operador en el centro
+                right = self.visit(ctx.expr(1))#caracter a la derecha
+                if op == '+':#Dependiendo del operdor realiza la operacion
                     return left + right
                 elif op == '-':
                     return left - right
@@ -137,7 +139,7 @@ class AnalizadorVisitor(GramaticaVisitor):
                 else:
                     raise Exception("Operador desconocido: " + op)
         
-        else:
+        else:#si no coincide
             return self.visitChildren(ctx)
         
 

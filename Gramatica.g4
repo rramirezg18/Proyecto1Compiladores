@@ -2,7 +2,7 @@ grammar Gramatica;
  
 gramatica
     : VARIABLE LLAVE_APERTURA instruccion+ LLAVE_CIERRE EOF
-    ;//nombrePrgorama{instrucciones}
+    ;//nombrePrograma{instrucciones}
 
 instruccion
     : declaracion
@@ -18,7 +18,7 @@ declaracion
     : asignacion_expr FIN_DE_LINEA
     ;
  
-// Asignación de valor a variables x = 5 / 5;
+// variables con expresiones x = 5 / 5;
 asignacion_expr
     : VARIABLE ASIGNACION expr
     ;
